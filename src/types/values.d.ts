@@ -11,10 +11,12 @@ export module values {
   export class Ref extends Value {
     constructor(id: string, col?: Ref, db?: Ref)
 
-    id: string
-    collection?: Ref
-    class?: Ref
-    database?: Ref
+    value: {
+      id: string
+      collection?: Ref
+      class?: Ref
+      database?: Ref
+    }
 
     readonly _isFaunaRef?: boolean
   }
